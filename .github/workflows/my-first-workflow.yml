@@ -9,5 +9,5 @@ jobs:
     steps:
       - run: echo "hello world"
       - name: Echo VAR1
-        run: echo ${{ env.VAR1 }}
+        run: echo "Value is ${{ env.VAR1 }}"
         env: { VAR1: "Hello from my first workflow!" }
