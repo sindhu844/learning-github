@@ -4,7 +4,7 @@ on:
 
 jobs:
   second-workflow:
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-latest, windows-latest]
     steps:
       - name: Run a script
         run: echo "Hello from the second workflow!"
