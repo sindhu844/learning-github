@@ -1,0 +1,19 @@
+# Event - on - Events can be of many type - Push, Pull, Comment, Discussion,
+# Github Actions is not limited to just CI/CD, it can be used for various automation tasks.# Job - atleast one job must be defined
+# steps - at least one step must be defined
+# Ubuntu - Bash Shell
+# Windows - PowerShell
+# MacOs - Bash Shell
+
+
+on:
+    push:
+jobs:
+    my-first-job:
+        name: GH - My First Job
+        runs-on: ubuntu-latest
+        steps:
+            - name: Run a multi-line script
+              run: |
+                echo Hello, world!
+                echo This is a multi-line script.
