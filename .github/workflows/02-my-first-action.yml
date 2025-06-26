@@ -5,17 +5,17 @@
 # Windows - PowerShell
 # MacOs - Bash Shell
 
-name: 01 - My First Workflow
+name: 02 - My First Action
 on:
   push:
-        branches:
-            - main
-            - master
 jobs:
-    my-first-job:
-        name: GH - My First Job
+    my-first-action:
+        name: GH - My First Action
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              
             - name: Run a multi-line script
               run: |
                 echo Hello, world!
