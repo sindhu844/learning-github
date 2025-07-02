@@ -22,7 +22,7 @@ jobs:
       - name: printing my office name
         env:
           MY_OFF: 'Aspire system'
-        run: echo "my off is $MY_OFF" 
+        run: echo "my off is $MY_OFF" >> arti.txt
 
       - name: upload artifacts
         uses: actions/upload-artifact@v4
