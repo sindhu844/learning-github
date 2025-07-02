@@ -5,7 +5,7 @@ on:
       - main
       - master
 env:
-  MY_NAME: 'Sindhu' >> arti.txt
+  MY_NAME: 'Sindhu'
 
 jobs:
   this-is-03-first-job:
