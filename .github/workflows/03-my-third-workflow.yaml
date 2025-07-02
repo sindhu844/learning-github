@@ -11,8 +11,8 @@ jobs:
     steps:
       name: printing my name 
       run: |
-           echo "hello sindhu"
-           echo "hello kuttu"
+           echo 'hello sindhu'
+           echo 'hello kuttu'
     steps:
       name: printing my office name
-      run: echo "Aspire system"
+      run: echo 'Aspire system'
