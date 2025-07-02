@@ -12,14 +12,13 @@ jobs:
     name: GH-03-01-job
     runs-on: ubuntu-latest
     env:
-      MY_NIECE: 'Kuttu' 
+      MY_NIECE: 'Kuttu'
     steps:
       
       - name: printing my name     
         run: |
-           echo "MY_NAME=$MY_NAME" > arti.txt
-           echo "MY_NIECE=$MY_NIECE" >> arti.txt
-           echo "MY_OFF=$MY_OFF" >> arti.txt
+           echo "hello $MY_NAME" >> arti.txt
+           echo "hello $MY_NIECE" >> arti.txt
       - name: printing my office name
         env:
           MY_OFF: 'Aspire system'
@@ -44,9 +43,7 @@ jobs:
           path: .
       - name: name from first job
         run: |
-           echo "My name is $MY_NAME"
-           echo "$MY_NIECE"
-           echo "$MY_OFF"
+           cat arti.txt
 
   
 
