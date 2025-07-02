@@ -22,5 +22,5 @@ jobs:
                 echo This is a multi-line script.
 
             - name: Run a single-line script
-              run: echo Hello, world! single line
+              run: echo Hello, world!
 
