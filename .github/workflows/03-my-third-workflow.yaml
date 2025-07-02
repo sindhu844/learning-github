@@ -19,7 +19,7 @@ jobs:
         env:
           MY_OFF: 'Aspire system'
         run: |
-           echo 'hello' "$MY_NAME"
+           echo 'hello' $MY_NAME
            echo "hello $MY_NIECE"
       - name: printing my office name
         run: echo 'Aspire system'
