@@ -17,12 +17,19 @@ jobs:
       
       - name: printing my name     
         run: |
-           echo "hello $MY_NAME"
-           echo "hello $MY_NIECE"
+           echo "hello $MY_NAME" >> arti.txt
+           echo "hello $MY_NIECE" >> arti.txt
       - name: printing my office name
         env:
           MY_OFF: 'Aspire system'
-        run: echo "my off is $MY_OFF"
+        run: echo "my off is $MY_OFF" >> arti.txt
+
+      - name: upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: arti.txt
+
   this-is-03-second-job:
     name: GH-03-02-job
     runs-on: ubuntu-latest
@@ -33,6 +40,11 @@ jobs:
            echo "My name is $MY_NAME"
            echo "$MY_NIECE"
            echo "$MY_OFF"
+      - name: download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: my-artifact
+          path: arti.txt
 
   
 
