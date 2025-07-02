@@ -9,10 +9,9 @@ jobs:
     name: GH-03-01-job
     runs-on: ubuntu-latest
     steps:
-      name: printing my name 
-      run: |
+      - name: printing my name 
+        run: |
            echo 'hello sindhu'
            echo 'hello kuttu'
-    steps:
-      name: printing my office name
-      run: echo 'Aspire system'
+      - name: printing my office name
+        run: echo 'Aspire system'
