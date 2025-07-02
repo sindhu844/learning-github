@@ -4,6 +4,9 @@ on:
     branches:
       - main
       - master
+env:
+  MY-NAME: 'Sindhu'
+
 jobs:
   this-is-03-first-job:
     name: GH-03-01-job
@@ -11,7 +14,7 @@ jobs:
     steps:
       - name: printing my name 
         run: |
-           echo 'hello sindhu'
+           echo 'hello $MY_NAME'
            echo 'hello kuttu'
       - name: printing my office name
         run: echo 'Aspire system'
