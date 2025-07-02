@@ -23,3 +23,16 @@ jobs:
         env:
           MY_OFF: 'Aspire system'
         run: echo "my off is $MY_OFF"
+  this-is-03-second-job:
+  name: GH-03-02-job
+  runs-on: ubuntu-latest
+  steps:
+    - name: name from first job
+      run: |
+           echo "My name is $MY_NAME"
+           echo "$MY_NIECE"
+           echo "$MY_OFF"
+
+  
+
+
