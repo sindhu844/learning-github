@@ -5,24 +5,25 @@ on:
       - main
       - master
 env:
-  MY_NAME: 'Sindhu'
+  MY_NAME: 'Sindhu' >> arti.txt
 
 jobs:
   this-is-03-first-job:
     name: GH-03-01-job
     runs-on: ubuntu-latest
     env:
-      MY_NIECE: 'Kuttu'
+      MY_NIECE: 'Kuttu' 
     steps:
       
       - name: printing my name     
         run: |
-           echo "hello $MY_NAME" >> arti.txt
-           echo "hello $MY_NIECE" >> arti.txt
+           echo "MY_NAME=$MY_NAME" > arti.txt
+           echo "MY_NIECE=$MY_NIECE" >> arti.txt
+           echo "MY_OFF=$MY_OFF" >> arti.txt
       - name: printing my office name
         env:
           MY_OFF: 'Aspire system'
-        run: echo "my off is $MY_OFF" >> arti.txt
+        run: echo "my off is $MY_OFF" 
 
       - name: upload artifacts
         uses: actions/upload-artifact@v4
