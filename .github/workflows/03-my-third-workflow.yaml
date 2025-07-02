@@ -5,7 +5,7 @@ on:
       - main
       - master
 jobs:
-  this is 03 first job:
+  this-is-03-first-job:
     name: GH-03-01-job
     runs-on: ubuntu-latest
     steps:
