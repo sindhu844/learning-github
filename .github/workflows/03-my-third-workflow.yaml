@@ -15,11 +15,11 @@ jobs:
       MY_NIECE: 'Kuttu'
     steps:
       
-      - name: printing my name 
-        env:
-          MY_OFF: 'Aspire system'
+      - name: printing my name     
         run: |
            echo "hello $MY_NAME"
            echo "hello $MY_NIECE"
       - name: printing my office name
+        env:
+          MY_OFF: 'Aspire system'
         run: echo "my off is $MY_OFF"
