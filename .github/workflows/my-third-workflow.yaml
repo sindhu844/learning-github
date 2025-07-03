@@ -20,7 +20,7 @@ jobs:
            echo "hello $MY_NAME" >> arti.txt
            echo "hello $MY_NIECE" >> arti.txt
            echo "${{ github.ref }}"
-           echo "${{github.author}}"
+           echo "${{ github.actor }}"
       - name: printing my office name
         env:
           MY_OFF: 'Aspire system'
