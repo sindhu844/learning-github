@@ -35,17 +35,9 @@ jobs:
           name: my-artifact
           path: arti.txt
 
-      - name: Download and run SonarScanner
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          curl -sSLo sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
-          unzip sonar-scanner.zip
-          ./sonar-scanner-*/bin/sonar-scanner \
-            -Dsonar.projectKey=my-python-app \
-            -Dsonar.sources=. \
-            -Dsonar.host.url=http://172.184.97.179/:9000 \
-            -Dsonar.login=$SONAR_TOKEN
+      - name: Check SonarQube connectivity
+        run: curl -v http://172.184.97.179:9000
+
 
   this-is-03-second-job:
     name: GH-03-02-job
