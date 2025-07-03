@@ -22,6 +22,7 @@ jobs:
            echo "${{ github.ref }}"
            echo "${{ github.actor }}"
            echo "${{1>3}}"
+           echo "${{6>5}}"
       - name: printing my office name
         env:
           MY_OFF: 'Aspire system'
