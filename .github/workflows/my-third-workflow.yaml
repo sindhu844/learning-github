@@ -35,8 +35,13 @@ jobs:
           name: my-artifact
           path: arti.txt
 
-      - name: Check SonarQube connectivity
-        run: curl -v http://172.184.97.179:9000
+      - name: SonarQube Scan
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+          unzip sonar-scanner-cli-5.0.1.3006-linux.zip
+          ./sonar-scanner-5.0.1.3006-linux/bin/sonar-scanner -Dsonar.login=$SONAR_TOKEN
 
 
   this-is-03-second-job:
