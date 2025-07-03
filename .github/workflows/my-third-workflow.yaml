@@ -21,6 +21,7 @@ jobs:
            echo "hello $MY_NIECE" >> arti.txt
            echo "${{ github.ref }}"
            echo "${{ github.actor }}"
+           echo "${{1>3}}"
       - name: printing my office name
         env:
           MY_OFF: 'Aspire system'
